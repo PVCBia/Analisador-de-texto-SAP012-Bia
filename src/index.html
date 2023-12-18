@@ -9,5 +9,29 @@
 
 <body>
   <script src="index.js" type="module"></script>
+  <header>
+    <h1><span>Analizador de Texto</span></h1>
+  </header>
+  <main>
+    <h2>A partir da contagem dos caracteres, esta ferramenta te auxilia a identificar se o texto precisa ser mais sucinto
+      ou extenso.</h2><br>
+  
+    <!-- TEXTAREA não pode conter ID ou CLASS // faz mais sentido retirar ID?-->
+    <label for="user-input">Digite seu texto aqui:</label><br>
+    <textarea name="user-input" cols="30" rows="10"></textarea><br>
+    <button id="reset-button">Limpar Métricas</button>
+  <ul>
+    <li class="quadroDeInput" data-testeid="word-count">Contagem de palavras:</li>
+    <li class="quadroDeInput" data-testeid="character-count">Contagem de caracteres:</li>
+    <li class="quadroDeInput" data-testeid="character-no-spaces-count">Contagem sem espaços e sinais de pontuação:</li>
+    <li class="quadroDeInput" data-testeid="number-count">Contagem de números:</li>
+    <li class="quadroDeInput" data-testeid="number-sum">Contagem da soma total dos números:</li>
+    <li class="quadroDeInput" data-testeid="word-length-average">Contagem do comprimento das palavras:</li>
+  </ul>
+  </main>
 </body>
+<!-- FOOTER não pode conter ID, NAME ou CLASS-->
+<footer>
+  <p>Desenvolvido por <strong>Bia Carneiro</strong>.</p>
+</footer>
 </html>

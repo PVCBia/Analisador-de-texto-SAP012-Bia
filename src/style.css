@@ -1,0 +1,53 @@
+* {
+    margin: center;
+    background-color: #FFFAE2;
+    color: #635517;
+    font-family: monospace;
+    width: auto;
+    line-height: 100%;
+
+
+    /*
+  letter-spacing: -75%;
+  border: 5px solid #92977E;*/
+}
+
+header {
+    color: #2800FF;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 200%;
+    margin: auto;
+    text-align: center;
+    letter-spacing: 5px;
+
+}
+
+h1 {
+    color: #A58E27;
+}
+
+span {
+    background-color: #EADDA6;
+}
+
+quadroDeInput {
+    line-height: 200%;
+
+}
+
+textarea {
+    resize: both;
+    overflow: auto;
+    border: 3px solid #92977E;
+
+}
+
+
+reset-button {
+    border: 3px solid #92977E;
+    padding: auto;
+    line-height: 200%;
+    margin: auto;
+    text-align: center;
+}
