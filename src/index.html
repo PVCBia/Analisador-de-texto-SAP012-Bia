@@ -4,38 +4,34 @@
 <head>
   <meta charset="utf-8">
   <title>Analisador de texto</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
+  <script src="index.js" type="module"></script>
 </head>
 
 <body>
-  <script src="index.js" type="module"></script>
   <header>
     <h1> Analisador de Texto </h1>
   </header>
-  <br><br>
-  
+    
   <main>
     <h2><span>A partir da contagem dos caracteres, esta ferramenta te auxilia a identificar se o texto precisa ser mais sucinto
       ou extenso.</span></h2>
-    <br><br><br><br>
-  
-    <!-- TEXTAREA não pode conter ID ou CLASS // faz mais sentido retirar ID?-->
-    <center><label for="user-input">Digite seu texto aqui:</label>
-    <textarea name="user-input" cols="30" rows="10"></textarea>
-
+    
+    <!-- TEXTAREA não pode conter ID ou CLASS -->
+    <center><label for="user-input">Digite seu texto aqui:</label><br>
+    <textarea name="user-input" cols="30" rows="10"></textarea><br>
     <button id="reset-button">Limpar Métricas</button></center>
   
   <ul>
-    <li class="quadroDeInput" data-testeid="word-count">Contagem de palavras:</li>
-    <li class="quadroDeInput" data-testeid="character-count">Contagem de caracteres:</li>
-    <li class="quadroDeInput" data-testeid="character-no-spaces-count">Contagem sem espaços e sinais de pontuação:</li>
-    <li class="quadroDeInput" data-testeid="number-count">Contagem de números:</li>
-    <li class="quadroDeInput" data-testeid="number-sum">Contagem da soma total dos números:</li>
-    <li class="quadroDeInput" data-testeid="word-length-average">Contagem do comprimento das palavras:</li>
+    <li class="marcadores" data-testeid="word-count">Contagem de palavras:</li>
+    <li class="marcadores" data-testeid="character-count">Contagem de caracteres:</li>
+    <li class="marcadores" data-testeid="character-no-spaces-count">Contagem sem espaços e sinais de pontuação:</li>
+    <li class="marcadores" data-testeid="number-count">Contagem de números:</li>
+    <li class="marcadores" data-testeid="number-sum">Contagem da soma total dos números:</li>
+    <li class="marcadores" data-testeid="word-length-average">Contagem do comprimento das palavras:</li>
   </ul>
   </main>
 </body>
-<br><br>
 
 <!-- FOOTER não pode conter ID, NAME ou CLASS-->
 <footer>
