@@ -1,34 +1,52 @@
 import analyzer from './analyzer.js';
 
-//TODO: escuchar eventos del DOM e invocar  los métodos del objeto `analyzer`.
+const textarea = document.querySelector('textarea');
+const wordCountElement = document.querySelector('[data-testid="word-count"]');
+const characterCountElement = document.querySelector('[data-testid="character-count"]');
+const characterNoSpacesCountElement = document.querySelector('[data-testid="character-no-spaces-count"]');
+const numberCountElement = document.querySelector('[data-testid="number-count"]');
+const numberSumElement = document.querySelector('[data-testid="number-sum"]');
+const wordLengthAverageElement = document.querySelector('[data-testid="word-length-average"]');
+const resetButton = document.getElementById('reset-button');
 
 
-document.querySelector('textarea').addEventListener('input', () => {
-  const text = document.querySelector('textarea').value;
-  const wordCount = analyzer.getWordCount(text);
-  document.querySelector('[data-testid="word-count"]').textContent=`Contagem de palavras:${wordCount}`;
+
+textarea.addEventListener('input', () => {
+  const text = textarea.value;
+
+  //wordCount.textContent = 'Contagem de caracteres: ' + getWordCount(text);
+
+
+  /*const wordCountElement = analyzer.getWordCount(text);
+  wordCountElement.textContent = `Contagem de palavras: ${wordCount}`;*/
+
+
+
   const characterCount = analyzer.getCharacterCount(text);
-  document.querySelector('[data-testid="character-count"]').textContent = `Contagem de caracteres: ${characterCount}`;
+  characterCountElement.textContent = `Contagem de caracteres: ${characterCount}`;
+
   const characterNoSpacesCount = analyzer.getCharacterCountExcludingSpaces(text);
-  document.querySelector('[data-testid="character-no-spaces-count"]').textContent = `Contagem sem espaços e sinais de pontuação: ${characterNoSpacesCount}`;
+  characterNoSpacesCountElement.textContent = `Contagem sem espaços e sinais de pontuação: ${characterNoSpacesCount}`;
+
   const numberCount = analyzer.getNumberCount(text);
-  document.querySelector('[data-testid="number-count"]').textContent = `Contagem de números: ${numberCount}`;
+  numberCountElement.textContent = `Contagem de números: ${numberCount}`;
+
   const numberSum = analyzer.getNumberSum(text);
-  document.querySelector('[data-testid="number-sum"]').textContent = `Contagem da soma total dos números: ${numberSum}`;
+  numberSumElement.textContent = `Contagem da soma total dos números: ${numberSum}`;
+
   const wordLengthAverage = analyzer.getAverageWordLength(text);
-  document.querySelector('[data-testid="word-length-average"]').textContent = `Contagem do comprimento das palavras: ${wordLengthAverage}`;
+  wordLengthAverageElement.textContent = `Contagem do comprimento das palavras: ${wordLengthAverage}`;
 })
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  const button = document.getElementById('reset-button');
-  button.addEventListener('click', () => {
-    document.querySelector('textarea').value = '';
-    document.querySelector('[data-testid="word-count"]').textContent = 'Contagem de palavras:';
-    document.querySelector('[data-testid="character-count"]').textContent = 'Contagem de caracteres:';
-    document.querySelector('[data-testid="character-no-spaces-count"]').textContent = 'Contagem sem espaços e sinais de pontuação:';
-    document.querySelector('[data-testid="number-count"]').textContent = 'Contagem de números:';
-    document.querySelector('[data-testid="number-sum"]').textContent = 'Contagem da soma total dos números:';
-    document.querySelector('[data-testid="word-length-average"]').textContent = 'Contagem do comprimento das palavras:';
-  })
-})
+
+
+resetButton.addEventListener('click', () => {
+  textarea.value = '';
+  wordCountElement.textContent = 'Contagem de palavras:';
+  characterCountElement.textContent = 'Contagem de caracteres:';
+  characterNoSpacesCountElement.textContent = 'Contagem sem espaços e sinais de pontuação:';
+  numberCountElement.textContent = 'Contagem de números:';
+  numberSumElement.textContent = 'Contagem da soma total dos números:';
+  wordLengthAverageElement.textContent = 'Contagem do comprimento das palavras:';
+});
