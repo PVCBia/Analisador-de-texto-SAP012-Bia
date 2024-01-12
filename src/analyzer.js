@@ -30,9 +30,10 @@ const analyzer = {
   //parâmetro `text` do tipo`string`.
   
   getNumberCount: (text) => {
-    const numbers = text.split(/\D/);
+    const numbers = text.split(' '); //// string vazia
     let count = 0;
     for (let i = 0; i < numbers.length; i++) {
+      console.log (numbers[i])
       if (numbers[i] >= '0' && numbers[i] <= '9') {
         count++;
       }
@@ -76,12 +77,12 @@ const analyzer = {
     }
     const averageWordLength = wordLength / words.length;
     return parseFloat(averageWordLength.toFixed(2));
-
+    //preciso remover outros caractéres de pontuação?
     //calcula o comprimento médio das palavras em uma string
     //divide a string em palavras e, em seguida, calcula a soma dos 
     //comprimentos das palavras e a divide pelo número total de palavras
     //para obter a média
-    //O resultado é então arredondado para duas casas decimais.
+    //o resultado é então arredondado para duas casas decimais
   },
 };
 

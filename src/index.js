@@ -1,5 +1,6 @@
 import analyzer from './analyzer.js';
 
+//chamar os elementos
 const textarea = document.querySelector('textarea');
 const wordCountElement = document.querySelector('[data-testid="word-count"]');
 const characterCountElement = document.querySelector('[data-testid="character-count"]');
@@ -9,18 +10,12 @@ const numberSumElement = document.querySelector('[data-testid="number-sum"]');
 const wordLengthAverageElement = document.querySelector('[data-testid="word-length-average"]');
 const resetButton = document.getElementById('reset-button');
 
-
-
+//espreita // ação
 textarea.addEventListener('input', () => {
   const text = textarea.value;
 
-  //wordCount.textContent = 'Contagem de caracteres: ' + getWordCount(text);
-
-
-  /*const wordCountElement = analyzer.getWordCount(text);
-  wordCountElement.textContent = `Contagem de palavras: ${wordCount}`;*/
-
-
+  const wordCount = analyzer.getWordCount(text);
+  wordCountElement.textContent = `Contagem de palavras: ${wordCount}`;
 
   const characterCount = analyzer.getCharacterCount(text);
   characterCountElement.textContent = `Contagem de caracteres: ${characterCount}`;
@@ -38,9 +33,7 @@ textarea.addEventListener('input', () => {
   wordLengthAverageElement.textContent = `Contagem do comprimento das palavras: ${wordLengthAverage}`;
 })
 
-
-
-
+//espreita // ação
 resetButton.addEventListener('click', () => {
   textarea.value = '';
   wordCountElement.textContent = 'Contagem de palavras:';
