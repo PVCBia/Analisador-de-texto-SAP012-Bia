@@ -36,10 +36,10 @@ textarea.addEventListener('input', () => {
 //espreita // ação
 resetButton.addEventListener('click', () => {
   textarea.value = '';
-  wordCountElement.textContent = 'Contagem de palavras:';
-  characterCountElement.textContent = 'Contagem de caracteres:';
-  characterNoSpacesCountElement.textContent = 'Contagem sem espaços e sinais de pontuação:';
-  numberCountElement.textContent = 'Contagem de números:';
-  numberSumElement.textContent = 'Contagem da soma total dos números:';
-  wordLengthAverageElement.textContent = 'Contagem do comprimento das palavras:';
+  wordCountElement.textContent = 'Contagem de palavras: 0';
+  characterCountElement.textContent = 'Contagem de caracteres: 0';
+  characterNoSpacesCountElement.textContent = 'Contagem sem espaços e sinais de pontuação: 0';
+  numberCountElement.textContent = 'Contagem de números: 0';
+  numberSumElement.textContent = 'Contagem da soma total dos números: 0';
+  wordLengthAverageElement.textContent = 'Contagem do comprimento das palavras: 0';
 });
